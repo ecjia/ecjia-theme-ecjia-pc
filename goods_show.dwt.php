@@ -59,14 +59,14 @@
                 </div>
              <div class="sao_small_img">
                 <img src="{$goods_info.url}">
-                <p><span>扫一扫</span><span>立即购买</span></p>
+                <p><span>扫一扫</span><span>手机购买</span></p>
             </div>
         </div>
         
          <div class="panel_sao">
             <div class="panel_sao_pa">
                 <img src="{$goods_info.url}">
-                <p><span>扫一扫</span><span>立即购买</span></p>
+                <p><span>扫一扫</span><span>手机购买</span></p>
             </div>
         </div>
                 
