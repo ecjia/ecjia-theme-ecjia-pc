@@ -57,7 +57,10 @@
                         <!-- {/foreach} -->
                     </div>
                 </div>
-             <span class="sao_small_img"><img src="{$goods_info.url}"></span>
+             <div class="sao_small_img">
+                <img src="{$goods_info.url}">
+                <p><span>扫一扫</span><span>立即购买</span></p>
+            </div>
         </div>
         
          <div class="panel_sao">
@@ -122,7 +125,7 @@
             </div>
             <div class="sao_text">
                 <p>扫一扫</p>
-                <p>下载EC+到家APP</p>
+                <p>下载APP</p>
             </div>
         </div>
         {else}
