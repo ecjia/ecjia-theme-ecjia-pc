@@ -89,7 +89,7 @@ class pc_function {
             $_COOKIE['city_id'] = $city_detail['region_id'];
             $_COOKIE['city_name'] = $city_detail['region_name'];
             
-            if (empty($_COOKIE['location_address'])) {
+            if (empty($_COOKIE['location_id'])) {
             	setcookie("location_id", $city_detail['region_id']);
             	setcookie("location_address", $city_detail['region_name']);
             	$_COOKIE['location_id'] = $city_detail['region_id'];
