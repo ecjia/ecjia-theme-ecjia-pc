@@ -18,7 +18,7 @@
 	position: relative;
 }
 .merchant-promotions-ul .promotions-li .goods-border {
-    border: 0.5px solid #eaeaea;
+    border: 1px solid #eaeaea;
     position: absolute;
     height: 4.5em;
     left: 99%;
