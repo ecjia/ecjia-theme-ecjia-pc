@@ -440,6 +440,9 @@
     min-height: 400px;
     padding: 0 40px;
 }
+.goods_info .goods_introduce .goods_introduce_detail table {
+    max-width: 845px;
+}
 .goods_info .goods_introduce .goods_introduce_detail li {
     list-style-type: disc;
 }
