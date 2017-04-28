@@ -95,7 +95,7 @@
         	var cycleimage_config = {
 		    	pagination : '.swiper-index-pagination',
 		        slidesPerView: 1,
-		        autoplay: 2000,
+		        autoplay: 5000,
 		        effect: 'fade',//fade
 		        loop: true,
 		        autoplayDisableOnInteraction: false,
@@ -106,7 +106,7 @@
         	var merchant_cycleimage_config = {
 		    	pagination : '.swiper-merchant-pagination',
 		        slidesPerView: 1,
-		        autoplay: 2000,
+		        autoplay: 5000,
 		        effect: 'fade',//fade
 		        loop: true,
 		        autoplayDisableOnInteraction: false,
