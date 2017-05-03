@@ -1,6 +1,7 @@
 /**
  * 后台综合js文件
  */
+
 ;(function(ecjia, $) {
 	ecjia.pc = {
 		init : function() {
@@ -14,6 +15,9 @@
 			ecjia.pc.move_mouse();
 			ecjia.pc.select_standard();
 			ecjia.pc.category_list_hidden();
+			
+			ecjia.pc.index_swiper();
+			ecjia.pc.merchant_swiper();
 		},
 		/**
 		 * 设置PJAX
@@ -91,28 +95,6 @@
                     "top":m_t+"px"
                 });
         	});
-
-        	var cycleimage_config = {
-		    	pagination : '.swiper-index-pagination',
-		        slidesPerView: 1,
-		        autoplay: 5000,
-		        effect: 'fade',//fade
-		        loop: true,
-		        autoplayDisableOnInteraction: false,
-		        paginationClickable: true,
-		    };
-		    var swiper = new Swiper('#swiper-web', cycleimage_config);
-		    
-        	var merchant_cycleimage_config = {
-		    	pagination : '.swiper-merchant-pagination',
-		        slidesPerView: 1,
-		        autoplay: 5000,
-		        effect: 'fade',//fade
-		        loop: true,
-		        autoplayDisableOnInteraction: false,
-		        paginationClickable: true,
-		    };
-		    var  merchant_swiper = new Swiper('#swiper-merchant-cycleimage', merchant_cycleimage_config);
 
     		// 效果
     		$(".suspension").find(".j-icon").mouseover(
@@ -431,7 +413,7 @@
 		         nextButton:'.swiper-button-next',
 		    });
 		    
-			$('.swiper-slide').find('a').off('click').on('click', function(e) {
+			$('category-swiper-web .swiper-slide').find('a').off('click').on('click', function(e) {
 				e.preventDefault();
 				var $this = $(this).parents('.swiper-slide'),
 					id = $this.attr('id');
@@ -443,6 +425,42 @@
 			        sessionStorage.setItem("index", i);
 					ecjia.pjax(url);
 			});
+		},
+		
+		index_swiper: function() {
+//			console.log(sessionStorage.getItem("index_swiper"));
+		    if (sessionStorage.getItem("index_swiper") == 1) {
+		        return false;
+		    }
+        	var cycleimage_config = {
+		    	pagination : '.swiper-index-pagination',
+		        slidesPerView: 1,
+		        autoplay: 5000,
+		        effect: 'fade',//fade
+		        loop: true,
+		        autoplayDisableOnInteraction: false,
+		        paginationClickable: true,
+		    };
+		    var swiper = new Swiper('#swiper-web', cycleimage_config);
+		    sessionStorage.setItem("index_swiper", 1);
+		},
+		
+		merchant_swiper: function() {
+			console.log(sessionStorage.getItem("merchant_swiper"));
+		    if (sessionStorage.getItem("merchant_swiper") == 1) {
+		        return false;
+		    }
+        	var merchant_cycleimage_config = {
+		    	pagination : '.swiper-merchant-pagination',
+		        slidesPerView: 1,
+		        autoplay: 5000,
+		        effect: 'fade',//fade
+		        loop: true,
+		        autoplayDisableOnInteraction: false,
+		        paginationClickable: true,
+		    };
+		    var merchant_swiper = new Swiper('#swiper-merchant-cycleimage', merchant_cycleimage_config);	
+		    sessionStorage.setItem("merchant_swiper", 1);
 		},
 	};
 	
@@ -474,6 +492,8 @@
 
 	//PJAX开始
 	$(document).on('pjax:start', function(){
+		sessionStorage.removeItem('index_swiper');
+		sessionStorage.removeItem('merchant_swiper');
 	});
 
 	//PJAX前进、返回执行

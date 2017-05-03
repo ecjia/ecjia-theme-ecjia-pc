@@ -3,6 +3,7 @@
 
 <!-- {block name="footer"} -->
 <script type="text/javascript">
+	sessionStorage.removeItem('merchant_swiper');
 	ecjia.pc.init();
 </script>
 <!-- {/block} -->
@@ -17,9 +18,7 @@
 				<div class="swiper-wrapper">
 					<!-- {foreach from=$cycleimage item=val} -->
 					<div class="swiper-slide">
-						<div class="ecjia-text-right">
-							<a href="{$val.url}"><img src="{$val.image}"></a>
-						</div>
+						<a href="{$val.url}"><img src="{$val.image}"></a>
 					</div>
 					<!-- {/foreach} -->
 				</div>
