@@ -1,3 +1,7 @@
+<!-- /* -->
+<!--  Name: 城市选择 -->
+<!--  Description: 这是城市选择模块 -->
+<!--  */ -->
 <div class="choose-city-div">
 	<div class="city-content">
 		<div class="header">

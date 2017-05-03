@@ -1,3 +1,7 @@
+<!-- /* -->
+<!--  Name: 判断城市是否有商铺 -->
+<!--  Description: 当城市没有商铺的时候默认显示的页面 -->
+<!--  */ -->
 <div class="ecjia-no-content">
 	<div class="content">
 		<div class="content-container">

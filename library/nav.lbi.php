@@ -1,3 +1,7 @@
+<!-- /* -->
+<!--  Name: 右侧联系栏 -->
+<!--  Description: 这是右侧联系栏模块 -->
+<!--  */ -->
 <div class="suspension">
 	<div class="suspension-box">
 		{if $info.kf_qq neq ''}

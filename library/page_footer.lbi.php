@@ -1,4 +1,10 @@
-<?php defined('IN_ECJIA') or exit('No permission resources.');?>
+<?php 
+/*
+ Name: PC端公用尾部模块
+ Description: 这是PC端公用尾部模块
+ */
+defined('IN_ECJIA') or exit('No permission resources.');
+?>
 <div class="ecjia-page-footer">
 	<div class="foot-top">
 		<p>特色<span class="ecjia-green">到家</span>平台</p>
