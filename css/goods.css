@@ -393,19 +393,21 @@
     max-width: 100%;
     height: 15em;
     text-align: center;
-    margin: auto;
     display: table;
+    margin: auto;
     margin-top: 2em;
     background-color: #47aa4d;
     position: absolute;
 }
 .goods_info .down_sao .sao_code .sao_back {
-    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 25em;
 }
 .goods_info .down_sao .sao_code .sao_back img{
     width: 215px;
     height: 215px;
-    margin-left: 25px;
 }
 .goods_info .down_sao .sao_code span{
     display: table-cell;
@@ -422,7 +424,7 @@
     position: absolute;
     width: 200px;
     margin-top: 8px;
-    left: 15px;
+    left: 14px;
 }
 .goods_info .down_sao .sao_tow img{
     width: 200px;
