@@ -58,8 +58,8 @@
 	<div id="swiper-web" class="swiper-container">
 		<div class="swiper-wrapper">
 			<!-- {foreach from=$cycleimage item=val} -->
-			<div class="swiper-slide">
-				<a href="{$val.url}"><img src="{$val.image}"></a>
+			<div class="swiper-slide" style="background:url('{$val.image}') center center no-repeat;">
+				<a href="{$val.url}"></a>
 			</div>
 			<!-- {/foreach} -->
 		</div>
