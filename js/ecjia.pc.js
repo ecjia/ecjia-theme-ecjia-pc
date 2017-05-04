@@ -428,7 +428,6 @@
 		},
 		
 		index_swiper: function() {
-//			console.log(sessionStorage.getItem("index_swiper"));
 		    if (sessionStorage.getItem("index_swiper") == 1) {
 		        return false;
 		    }
@@ -446,7 +445,6 @@
 		},
 		
 		merchant_swiper: function() {
-			console.log(sessionStorage.getItem("merchant_swiper"));
 		    if (sessionStorage.getItem("merchant_swiper") == 1) {
 		        return false;
 		    }
