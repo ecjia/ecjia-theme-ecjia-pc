@@ -69,7 +69,7 @@
                     {if $val.shop_logo}
                         <img class="store_info_img" src="{RC_Upload::upload_url($val.shop_logo)}">
                     {else}
-                        <img class="store_info_img" src="{$theme_url}images/default/default255.png">
+                        <img class="store_info_img" src="{$theme_url}images/default255.png">
                     {/if}
                     <div class="store_msg">
                         <div class="store_name">{$val.merchants_name}</div>
@@ -91,13 +91,13 @@
                 <div class="announcement">
                     {if $val.shop_trade_time}
                     <div class="business_time">
-					     <img src="{$theme_url}images/icon/clock_50.png"/>
+					     <img src="{$theme_url}images/clock_50.png"/>
 					     <span>{$val.shop_trade_time}</span>
     				</div>
     				{/if}
                     {if $val.value}
         				<div class="advertisement">
-        				    <img src="{$theme_url}images/icon/bugle_50.png"/>
+        				    <img src="{$theme_url}images/bugle_50.png"/>
         					<div class="goods-price">{$val.value}</div>
         				</div>
     				{/if}

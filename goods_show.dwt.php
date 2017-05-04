@@ -68,7 +68,7 @@
             <div class="merchant_title">商家</div>
             <a href="{RC_Uri::url('merchant/goods/init')}&store_id={$goods_info.store_id}">
 	            <div class="merchant_img">
-                    <span><img src="{if $shop_info.shop_logo}{RC_Upload::upload_url($shop_info.shop_logo)}{else}{$theme_url}images/default/default255.png{/if}" /></span>
+                    <span><img src="{if $shop_info.shop_logo}{RC_Upload::upload_url($shop_info.shop_logo)}{else}{$theme_url}images/default255.png{/if}" /></span>
 	            </div>
             </a>
             <div class="merchant_name">

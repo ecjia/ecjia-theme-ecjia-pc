@@ -241,7 +241,7 @@ class goods_controller {
 	                $goods_info['favourable_list'] = $favourable_list;
 	            }
 	            
-	            $default_image = RC_Theme::get_template_directory_uri() . '/images/icon/mobile_app_icon.png';
+	            $default_image = RC_Theme::get_template_directory_uri() . '/images/mobile_app_icon.png';
 	            $goods_logo = !empty($goods_info['goods_thumb']) && file_exists(RC_Upload::upload_path($goods_info['goods_thumb'])) ? RC_Upload::upload_path($goods_info['goods_thumb']) : $default_image;
 	            $goods_info['url'] = with(new Ecjia\App\Mobile\Qrcode\GenerateGoods($goods_id,  $goods_logo))->getQrcodeUrl();
 	            

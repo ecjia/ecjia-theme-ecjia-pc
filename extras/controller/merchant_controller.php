@@ -65,8 +65,8 @@ class merchant_controller {
 
 			if (!empty($shop_info)) {
 				//店铺二维码
-				$default_image = RC_Theme::get_template_directory_uri() . '/images/icon/mobile_app_icon.png';
-				$default_shop_logo = RC_Theme::get_template_directory_uri() . '/images/default/default_store.png';
+				$default_image = RC_Theme::get_template_directory_uri() . '/images/mobile_app_icon.png';
+				$default_shop_logo = RC_Theme::get_template_directory_uri() . '/images/default_store.png';
 				if (!empty($shop_info['shop_logo']) && file_exists(RC_Upload::upload_path($shop_info['shop_logo']))) {
 					$store_logo = RC_Upload::upload_path($shop_info['shop_logo']);
 					$shop_info['shop_logo'] = RC_Upload::upload_url($shop_info['shop_logo']);
@@ -170,8 +170,8 @@ class merchant_controller {
             
 			if (!empty($shop_info)) {
 				//店铺二维码
-				$default_image = RC_Theme::get_template_directory_uri() . '/images/icon/mobile_app_icon.png';
-				$default_shop_logo = RC_Theme::get_template_directory_uri() . '/images/default/default_store.png';
+				$default_image = RC_Theme::get_template_directory_uri() . '/images/mobile_app_icon.png';
+				$default_shop_logo = RC_Theme::get_template_directory_uri() . '/images/default_store.png';
 				if (!empty($shop_info['shop_logo']) && file_exists(RC_Upload::upload_path($shop_info['shop_logo']))) {
 					$store_logo = RC_Upload::upload_path($shop_info['shop_logo']);
 					$shop_info['shop_logo'] = RC_Upload::upload_url($shop_info['shop_logo']);
@@ -298,8 +298,8 @@ class merchant_controller {
             
         	if (!empty($shop_info)) {
 				//店铺二维码
-				$default_image = RC_Theme::get_template_directory_uri() . '/images/icon/mobile_app_icon.png';
-				$default_shop_logo = RC_Theme::get_template_directory_uri() . '/images/default/default_store.png';
+				$default_image = RC_Theme::get_template_directory_uri() . '/images/mobile_app_icon.png';
+				$default_shop_logo = RC_Theme::get_template_directory_uri() . '/images/default_store.png';
 				if (!empty($shop_info['shop_logo']) && file_exists(RC_Upload::upload_path($shop_info['shop_logo']))) {
 					$store_logo = RC_Upload::upload_path($shop_info['shop_logo']);
 					$shop_info['shop_logo'] = RC_Upload::upload_url($shop_info['shop_logo']);

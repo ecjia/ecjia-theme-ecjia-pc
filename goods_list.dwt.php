@@ -103,7 +103,7 @@
 			<!-- {foreach from=$store_list item=val} -->
 			<div class="store-item">
 				<a href="{RC_Uri::url('merchant/goods/init')}&store_id={$val.store_id}">
-					<img class="store-logo" src="{if $val.store_info.shop_logo}{RC_Upload::upload_url($val.store_info.shop_logo)}{else}{$theme_url}images/default/default_store.png{/if}" />
+					<img class="store-logo" src="{if $val.store_info.shop_logo}{RC_Upload::upload_url($val.store_info.shop_logo)}{else}{$theme_url}images/default_store.png{/if}" />
 					<div class="shop-name">{$val.store_info.merchants_name}</div>
 				</a>
 				<div class="score-val" data-val="{$val.comment_rank}"></div>

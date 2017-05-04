@@ -9,7 +9,7 @@ defined('IN_ECJIA') or exit('No permission resources.');
 <div class="ecjia-header fixed">
 	<div class="ecjia-content">
 		<div class="ecjia-fl ecjia-logo">
-			<a href="{RC_Uri::url('main/index/init')}"><img class="wt-10" src="{if $info.shop_logo}{$info.shop_logo}{else}{$theme_url}images/icon/shop_logo.png{/if}"></a>
+			<a href="{RC_Uri::url('main/index/init')}"><img class="wt-10" src="{if $info.shop_logo}{$info.shop_logo}{else}{$theme_url}images/shop_logo.png{/if}"></a>
 			<div class="select-location">
 				<i class="icon-position"></i>
 				<span class="current-position">{$info.city_name}</span>
