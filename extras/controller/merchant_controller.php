@@ -160,7 +160,7 @@ class merchant_controller {
      */
 	public static function comment() {
 	    $cache_id = sprintf('%X', crc32($_SERVER['QUERY_STRING'].'-'.$_COOKIE['city_id'].'-'.$_COOKIE['city_name']));
-	    	
+	    
 	    if (!ecjia_front::$controller->is_cached('merchant_comment.dwt', $cache_id)) {
             $general_info = pc_function::get_general_info();
             ecjia_front::$controller->assign('info', $general_info);
@@ -224,9 +224,9 @@ class merchant_controller {
 	                    $row['add_time']    = RC_Time::local_date(ecjia::config('time_format'), $row['add_time']);
 	                    $row['content']  	= str_replace('\r\n', '<br />', htmlspecialchars($row['content']));
 	                    $row['content']  	= nl2br(str_replace('\n', '<br />', $row['content']));
-	                    $row['goods_attr']	= str_replace('\n', '', $row['goods_attr']);
-	                    $row['goods_attr']	= str_replace('\r\n', '', $row['goods_attr']);
-	                    $row['goods_attr']	= preg_replace("/\s/", "", $row['goods_attr']);
+	                    $row['goods_attr']	= str_replace('\n', '&nbsp;&nbsp;', $row['goods_attr']);
+	                    $row['goods_attr']	= str_replace('\r\n', '&nbsp;&nbsp;', $row['goods_attr']);
+	                    $row['goods_attr']	= preg_replace("/\s/", "&nbsp;&nbsp;", $row['goods_attr']);
 	                    $row['picture']     = array();
 	                    	
 	                    if ($row['has_image'] == 1) {
