@@ -16,11 +16,7 @@
     	{if $goods_info.goods_id}
         <div class="goods_current_screen">{$goods_info.cat_html}</div>
         <div class="goods_info_panel">
-            {if $goods_info.goods_thumb}
-                <img src="{$goods_info.goods_thumb}">
-            {else}
-                <img src="{$theme_url}images/default270.png">
-            {/if}
+            <img src="{if $goods_info.goods_thumb}{$goods_info.goods_thumb}{else}{$theme_url}images/default_goods.png{/if}" />
             <div class="f_goods_info_msg">
                 <p class="goods_name">{$goods_info.goods_name}</p>
                 <div class="goods_attribute">
@@ -29,23 +25,21 @@
                         {if $goods_info.promote_price && $goods_info.promote_price != 0}
                             <span class="fl_price">￥{$goods_info.f_price}</span>
                             <span class="original_price">原价：{$goods_info.shop_price}</span>
-                             <input name="goods_promote_price" type="hidden" value={$goods_info.promote_price} />
+                            <input name="goods_promote_price" type="hidden" value={$goods_info.promote_price} />
                         {else}
                             <span class="fl_price">￥{$goods_info.f_price}</span>
                             <span class="original_price">原价：{$goods_info.market_price}</span>
                             <input name="goods_promote_price" type="hidden" value={$goods_info.shop_price} />
                         {/if}
                      </p>
-                        
-                            {if $goods_info.favourable_list}
-                                <div class="privilege"><span>优惠</span>
-                                    <!-- {foreach from=$goods_info.favourable_list item=val key=key} -->
-                                        <span class="panel_red">{$val.name}</span>
-                            		<!-- {/foreach} -->
-                                </div>
-                  
-                            {/if}
-            
+                        {if $goods_info.favourable_list}
+                            <div class="privilege"><span>优惠</span>
+                                <!-- {foreach from=$goods_info.favourable_list item=val key=key} -->
+                                    <span class="panel_red">{$val.name}</span>
+                        		<!-- {/foreach} -->
+                            </div>
+              
+                        {/if}
                         <p class="sold_out"><span>已售</span><span class="sales">{$goods_info.order_amount}</span></p>
                         <!-- {foreach from=$goods_info.specification item=value key=key} -->
                         <span class="standard">{$value.name}</span>
@@ -74,11 +68,7 @@
             <div class="merchant_title">商家</div>
             <a href="{RC_Uri::url('merchant/goods/init')}&store_id={$goods_info.store_id}">
 	            <div class="merchant_img">
-	                {if $shop_info.shop_logo}
-	                <span><img src="{RC_Upload::upload_url($shop_info.shop_logo)}"></span>
-	                {else}
-	                <span><img src="{$theme_url}images/default255.png"></span>
-	                {/if}
+                    <span><img src="{if $shop_info.shop_logo}{RC_Upload::upload_url($shop_info.shop_logo)}{else}{$theme_url}images/default255.png{/if}" /></span>
 	            </div>
             </a>
             <div class="merchant_name">
