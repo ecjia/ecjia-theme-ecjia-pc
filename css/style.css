@@ -72,7 +72,7 @@ a:active,a:hover {
 	display: inline-block;
 	width: 20px;
 	height: 20px;
-	background-image: url(../images/icon_search_white.png);
+	background-image: url(../images/icon/icon_search_white.png);
 	background-repeat: no-repeat;
 	background-size: 20px 20px
 }
@@ -254,7 +254,7 @@ a:active,a:hover {
 	display: inline-block;
 	width: 20px;
 	height: 20px;
-	background-image: url(../images/icons.png);
+	background-image: url(../images/icon/icons.png);
 	background-repeat: no-repeat;
 	margin-right: 5px
 }
@@ -356,7 +356,7 @@ a:active,a:hover {
 }
 
 .ecjia-header .ecjia-logo .select-location i {
-	background-image: url(../images/pc_position.png);
+	background-image: url(../images/icon/pc_position.png);
 	width: 25px;
 	height: 25px;
 	background-size: 25px;
@@ -422,7 +422,7 @@ a:active,a:hover {
 	overflow: hidden;
 	width: 100%;
 	height: 420px;
-	background: url(../images/default_banner_pic.png) 0 0 no-repeat;
+	background: url(../images/default/default_banner_pic.png) 0 0 no-repeat;
     background-size: 100% 420px;
 }
 
@@ -769,7 +769,7 @@ a:active,a:hover {
 .ecjia-category-content .goods-item img {
 	width: 100%;
 	height: 220px;
-	background-image: url(../images/default_goods.png);
+	background-image: url(../images/default/default_goods.png);
 	background-size: 220px 220px;
 }
 
@@ -832,7 +832,7 @@ a:active,a:hover {
 	margin-left: 85px;
 	margin-top: 0;
 	height: 757px;
-	background: url(../images/phone.png) no-repeat;
+	background: url(../images/default/phone.png) no-repeat;
 	background-size: 100%;
 	position: relative
 }
@@ -852,7 +852,7 @@ a:active,a:hover {
 	color: #fff;
 	right: 0;
 	top: 200px;
-	background: url(../images/mouse.png) no-repeat bottom;
+	background: url(../images/icon/mouse.png) no-repeat bottom;
 	background-size: 100%
 }
 
@@ -1162,7 +1162,7 @@ a:active,a:hover {
 .ecjia-goods-list .f-list .goods-item img {
 	width: 100%;
 	height: 275px;
-	background-image: url(../images/default_goods.png);
+	background-image: url(../images/default/default_goods.png);
 	background-size: 275px 275px;
 }
 
@@ -1208,7 +1208,7 @@ a:active,a:hover {
 }
 
 .ecjia-goods-list .f-list .shop-name i.icon-merchant {
-	background-image: url(../images/store.png);
+	background-image: url(../images/icon/store.png);
 	background-size: 17px;
 	background-repeat: no-repeat;
 	position: absolute;
@@ -1565,16 +1565,16 @@ a:active,a:hover {
 }
 
 .ecjia-page-footer .outlink .blog-ico {
-	background: url(../images/blog.png);
+	background: url(../images/default/blog.png);
 	margin-right: 35px
 }
 
 .ecjia-page-footer .outlink .blog-ico:hover {
-	background: url(../images/blog_hover.png)
+	background: url(../images/default/blog_hover.png)
 }
 
 .ecjia-page-footer .outlink .wechat {
-	background: url(../images/wechat.png)
+	background: url(../images/default/wechat.png)
 }
 
 .ecjia-page-footer .outlink-qrcode {
@@ -1599,7 +1599,7 @@ a:active,a:hover {
 }
 
 .ecjia-page-footer .outlink .wechat:hover {
-	background: url(../images/wechat_hover.png)
+	background: url(../images/default/wechat_hover.png)
 }
 
 .ecjia-page-footer .outlink .outlink-qrcode:hover .wechar-code {
@@ -1642,16 +1642,16 @@ a:active,a:hover {
 }
 
 .page-footer .outlink .blog-ico {
-	background: url(../images/blog.png);
+	background: url(../images/default/blog.png);
 	margin-right: 35px
 }
 
 .page-footer .outlink .blog-ico:hover {
-	background: url(../images/blog_hover.png)
+	background: url(../images/default/blog_hover.png)
 }
 
 .page-footer .outlink .wechat {
-	background: url(../images/wechat.png)
+	background: url(../images/default/wechat.png)
 }
 
 .page-footer .outlink-qrcode {
@@ -1676,7 +1676,7 @@ a:active,a:hover {
 }
 
 .page-footer .outlink .wechat:hover {
-	background: url(../images/wechat_hover.png)
+	background: url(../images/default/wechat_hover.png)
 }
 
 .page-footer .outlink .outlink-qrcode:hover .wechar-code {
@@ -1815,7 +1815,7 @@ a:active,a:hover {
 	padding-bottom: 30px;
 }
 .ecjia-no-content .content {
-	background-image: url(../images/no_content.png);
+	background-image: url(../images/default/no_content.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 	width: 100%;

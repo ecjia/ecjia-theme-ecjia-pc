@@ -58,7 +58,7 @@
 	margin: 1em 0;
 }    
 .merchant-promotions-ul .promotions-li .store-right .store-range .trade-time {
-    background: url(../images/clock_50.png);
+    background: url(../images/icon/clock_50.png);
     width: 1.5em;
     height: 1.3em;
     background-size: 1.3em;
@@ -71,7 +71,7 @@
     white-space: nowrap;
 }   
 .merchant-promotions-ul .promotions-li .store-right .store-description .shop-notice {
-    background: url(../images/bugle_50.png);
+    background: url(../images/icon/bugle_50.png);
     width: 1.5em;
     height: 1.3em;
     background-size: 1.3em;

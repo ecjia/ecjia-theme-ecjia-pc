@@ -16,7 +16,7 @@
     	{if $goods_info.goods_id}
         <div class="goods_current_screen">{$goods_info.cat_html}</div>
         <div class="goods_info_panel">
-            <img src="{if $goods_info.goods_thumb}{$goods_info.goods_thumb}{else}{$theme_url}images/default_goods.png{/if}" />
+            <img src="{if $goods_info.goods_thumb}{$goods_info.goods_thumb}{else}{$theme_url}images/default/default_goods.png{/if}" />
             <div class="f_goods_info_msg">
                 <p class="goods_name">{$goods_info.goods_name}</p>
                 <div class="goods_attribute">
@@ -68,7 +68,7 @@
             <div class="merchant_title">商家</div>
             <a href="{RC_Uri::url('merchant/goods/init')}&store_id={$goods_info.store_id}">
 	            <div class="merchant_img">
-                    <span><img src="{if $shop_info.shop_logo}{RC_Upload::upload_url($shop_info.shop_logo)}{else}{$theme_url}images/default255.png{/if}" /></span>
+                    <span><img src="{if $shop_info.shop_logo}{RC_Upload::upload_url($shop_info.shop_logo)}{else}{$theme_url}images/default/default255.png{/if}" /></span>
 	            </div>
             </a>
             <div class="merchant_name">
@@ -85,7 +85,7 @@
         </div>
         
         <div class="goods_introduce">
-            <div class="cut_off"><img src="{$theme_url}images/cut_off.png"></div>
+            <div class="cut_off"><img src="{$theme_url}images/default/cut_off.png"></div>
             {if $goods_info.properties}
             <div class="specification">
                 <div class="goods_specification"><p class="rhombus"></p><p class="goods_description">规格参数</p></div>
@@ -110,7 +110,7 @@
         
         <div class="down_sao">
             <div class="sao_code">
-                <span class="sao_back"><img src="{$theme_url}images/bolang.png"></span>
+                <span class="sao_back"><img src="{$theme_url}images/default/bolang.png"></span>
                 <span class="sao_tow"><img src="{$goods_info.mobile_iphone_qrcode}"></span>
             </div>
             <div class="sao_text">

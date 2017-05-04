@@ -52,7 +52,7 @@
 					<!-- {foreach from=$goods_list item=val key=key} -->
 					<div class="goods-item">
 						<a href="{$goods_info_url}&goods_id={$val.id}">
-							<img src="{if $val.goods_img}{$val.goods_img}{else}{$theme_url}/images/default_goods.png{/if}" />
+							<img src="{if $val.goods_img}{$val.goods_img}{else}{$theme_url}/images/default/default_goods.png{/if}" />
 							<div class="goods-name">{$val.name}</div>
 							<div class="item-list">
 								<span class="goods-price">￥{$val.shop_price}</span>

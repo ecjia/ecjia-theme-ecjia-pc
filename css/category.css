@@ -157,7 +157,7 @@
 .category .store_list .category_store .shop_banner img{
     width: 100%;
     height: 120px;
-	background: url(../images/default800.png) 0 0 no-repeat;
+	background: url(../images/default/default800.png) 0 0 no-repeat;
 	background-size: 100% 120px;
 }
 
@@ -229,7 +229,7 @@
 	min-width: 1200px;
 	text-align: center;
 	line-height: 0;    
-	background: url(../images/category_title_img.png) 0 0 no-repeat;
+	background: url(../images/category/category_list.png) 0 0 no-repeat;
     background-size: 100% 420px;
 }
 

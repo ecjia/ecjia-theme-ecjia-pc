@@ -71,7 +71,7 @@ defined('IN_ECJIA') or header("HTTP/1.0 404 Not Found");exit('404 Not Found');
             {if $shop_info.banner_pic}
             <img src="{$shop_info.banner_pic}">
             {else}
-            <img src="{$theme_url}/images/default_banner_pic.png">
+            <img src="{$theme_url}/images/default/default_banner_pic.png">
             {/if}
         </div>
         

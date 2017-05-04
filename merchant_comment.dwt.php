@@ -45,7 +45,7 @@
 		        {if $val.avatar_img}
 		            <img src="{$val.avatar_img}" />
 		        {else}
-		            <img src="{$theme_url}/images/default_avatar.png" />
+		            <img src="{$theme_url}/images/default/default_avatar.png" />
 		        {/if}
 		        </div>
 		        <div class="comment-right">

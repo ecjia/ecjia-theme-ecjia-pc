@@ -50,10 +50,10 @@
     
     <div class="store_list">
         <div class="store_list_title">
-            <img src="{$theme_url}images/store_list_line.png"/>
-            <img src="{if $store_list.cat_img}{$store_list.cat_img}{else}{$theme_url}images/category_all_on.png{/if}"/>
+            <img src="{$theme_url}images/default/store_list_line.png"/>
+            <img src="{if $store_list.cat_img}{$store_list.cat_img}{else}{$theme_url}images/category/category_all_on.png{/if}"/>
             <span>{$store_list.cat_name}</span>
-            	<img src="{$theme_url}images/store_list_line.png"/>
+            	<img src="{$theme_url}images/default/store_list_line.png"/>
         	</span>
         </div>
         {if $store_list.item}
@@ -63,13 +63,13 @@
                 {if $val.banner_pic}
                     <div class="shop_banner"><img src="{$val.banner_pic}"/></div>
                 {else}
-                    <div class="shop_banner"><img src="{$theme_url}images/default800.png"/></div>
+                    <div class="shop_banner"><img src="{$theme_url}images/default/default800.png"/></div>
                 {/if}
                 <div class="store_info">
                     {if $val.shop_logo}
                         <img class="store_info_img" src="{RC_Upload::upload_url($val.shop_logo)}">
                     {else}
-                        <img class="store_info_img" src="{$theme_url}images/default255.png">
+                        <img class="store_info_img" src="{$theme_url}images/default/default255.png">
                     {/if}
                     <div class="store_msg">
                         <div class="store_name">{$val.merchants_name}</div>
@@ -91,13 +91,13 @@
                 <div class="announcement">
                     {if $val.shop_trade_time}
                     <div class="business_time">
-					     <img src="{$theme_url}images/clock_50.png"/>
+					     <img src="{$theme_url}images/icon/clock_50.png"/>
 					     <span>{$val.shop_trade_time}</span>
     				</div>
     				{/if}
                     {if $val.value}
         				<div class="advertisement">
-        				    <img src="{$theme_url}images/bugle_50.png"/>
+        				    <img src="{$theme_url}images/icon/bugle_50.png"/>
         					<div class="goods-price">{$val.value}</div>
         				</div>
     				{/if}

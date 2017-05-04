@@ -195,7 +195,7 @@
 	display: none;
 }
  .panel_sao .panel_sao_pa{
-    background: url(../images/saoyisao.png) no-repeat center;
+    background: url(../images/default/saoyisao.png) no-repeat center;
     text-align: center;
     margin: 10px 0px 0 555px;
     top: 16em;

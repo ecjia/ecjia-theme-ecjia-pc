@@ -16,7 +16,7 @@
 			<!-- {foreach from=$cat item=val key=key} -->
 			<div class="ecjia-category-info-l1">
 				<a class="ecjia-category-l2" href="{$goods_url}&cat_id={$val.id}">
-					<span class="category-icon"><img src="{if $val.img}{$val.img}{else}{$theme_url}images/category_all_on.png{/if}"></span>{$val.name}
+					<span class="category-icon"><img src="{if $val.img}{$val.img}{else}{$theme_url}images/category/category_all_on.png{/if}"></span>{$val.name}
 					<i class="iconfont icon-jiantou-right"></i>
 				</a>
 				<div class="ecjia-category-info-l2">
@@ -93,7 +93,7 @@
 					<!-- {foreach from=$children.goods_list item=c} -->
 					<div class="goods-item">
 						<a href="{$goods_info_url}&goods_id={$c.goods_id}">
-							<img src="{if $c.goods_img}{$c.goods_img}{else}{$theme_url}images/default_goods.png{/if}"/>
+							<img src="{if $c.goods_img}{$c.goods_img}{else}{$theme_url}images/default/default_goods.png{/if}"/>
 							<div class="goods-name">{$c.goods_name}</div>
 							<div class="item-list">
 								<span class="goods-price">{if $c.unformatted_promote_price neq 0}{$c.promote_price}{else}{$c.shop_price}{/if}</span>
@@ -121,7 +121,7 @@
 		<li class="J_lift_item lift_item lift_item_first" data-id="item-{$key}">
 			<a href="javascript:;" class="lift_btn"> 
 				<span class="category-icon" data-item="#item-{$key}">
-					<img src="{if $val.image}{$val.image}{else}{$theme_url}images/category_all_on.png{/if}">
+					<img src="{if $val.image}{$val.image}{else}{$theme_url}images/category/category_all_on.png{/if}">
 					<span>{$val.name}</span>
 				</span>
 			</a>
