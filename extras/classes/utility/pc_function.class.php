@@ -84,14 +84,14 @@ class pc_function {
                 $ipInfos['city'] = '上海';
             }
             $city_detail = RC_DB::table('region')->where('region_name', 'like', '%' . mysql_like_quote($ipInfos['city']) . '%')->where('region_type', 2)->first();
-            setcookie("city_id", $city_detail['region_id']);
-            setcookie("city_name", $city_detail['region_name']);
+            setcookie("city_id", $city_detail['region_id'], RC_Time::gmtime() + 3600 * 24 * 7);
+            setcookie("city_name", $city_detail['region_name'], RC_Time::gmtime() + 3600 * 24 * 7);
             $_COOKIE['city_id'] = $city_detail['region_id'];
             $_COOKIE['city_name'] = $city_detail['region_name'];
             
             if (empty($_COOKIE['location_id'])) {
-            	setcookie("location_id", $city_detail['region_id']);
-            	setcookie("location_address", $city_detail['region_name']);
+            	setcookie("location_id", $city_detail['region_id'], RC_Time::gmtime() + 3600 * 24 * 7);
+            	setcookie("location_address", $city_detail['region_name'], RC_Time::gmtime() + 3600 * 24 * 7);
             	$_COOKIE['location_id'] = $city_detail['region_id'];
             	$_COOKIE['location_address'] = $city_detail['region_name'];
             }

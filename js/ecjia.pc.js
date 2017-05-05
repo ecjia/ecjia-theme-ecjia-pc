@@ -206,9 +206,9 @@
     			var city_id = $(this).attr('data-id');
     			var city_name = $(this).text();
     			
-    			$.cookie('city_id', city_id);
-    			$.cookie('city_name', city_name);
-    			$.cookie('close_choose_city', 1);
+    			$.cookie('city_id', city_id, {expires: 7});
+    			$.cookie('city_name', city_name, {expires: 7});
+    			$.cookie('close_choose_city', 1, {expires: 7});
     			
     		    location.reload();
     		    $(document).scrollTop(0);
@@ -476,7 +476,7 @@
     }
 
     function hideDiv(){
-    	$.cookie('close_choose_city', 1);
+    	$.cookie('close_choose_city', 1, {expires: 7});
         $(".choose-city-div").hide();
         $(".choose-city-overlay").hide();
     }
