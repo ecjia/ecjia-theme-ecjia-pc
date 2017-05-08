@@ -1422,7 +1422,8 @@ a:active,a:hover {
 	z-index: 100;
 	left: 20px;
 	top: 245px;
-	display: none
+	display: none;
+	width: 46px;
 }
 
 .lift .category-icon {
