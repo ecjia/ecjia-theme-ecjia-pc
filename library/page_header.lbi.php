@@ -9,7 +9,7 @@ defined('IN_ECJIA') or exit('No permission resources.');
 <div class="ecjia-header fixed">
 	<div class="ecjia-content">
 		<div class="ecjia-fl ecjia-logo">
-			<a href="{RC_Uri::url('main/index/init')}"><img class="wt-10" src="{if $info.shop_logo}{$info.shop_logo}{else}{$theme_url}images/shop_logo.png{/if}"></a>
+			<a href="{RC_Uri::home_url()}"><img class="wt-10" src="{if $info.shop_logo}{$info.shop_logo}{else}{$theme_url}images/shop_logo.png{/if}"></a>
 			<div class="select-location">
 				<i class="icon-position"></i>
 				<span class="current-position">{$info.city_name}</span>
@@ -23,7 +23,7 @@ defined('IN_ECJIA') or exit('No permission resources.');
 		</div>
 		<div class="ecjia-fr">
 			<ul class="nav">
-				<li {if $active eq 'main'}class="active"{/if}><a href="{RC_Uri::url('main/index/init')}">首页</a></li>
+				<li {if $active eq 'main'}class="active"{/if}><a href="{RC_Uri::home_url()}">首页</a></li>
 				<li {if $active eq 'category'}class="active"{/if}><a class="merchant-list" href="{RC_Uri::url('merchant/store/category')}">商家</a></li>
 				<li><a class="nopjax" href="{RC_Uri::site_url('/sites/app/')}">下载APP</a></li>
 				<li><a class="nopjax" href="{$info.merchant_url}" target="_blank">商家入驻</a></li>
