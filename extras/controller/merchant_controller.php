@@ -379,6 +379,7 @@ class merchant_controller {
 			->orderBy('parent_id', 'asc')
 			->orderBy('sort_order', 'asc')
 			->where('is_show', 1)
+			->where('parent_id', 0)
         	->get();
         $category_list = array();
         if (!empty($data)) {
