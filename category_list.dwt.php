@@ -10,9 +10,10 @@
 
 <!-- {block name="main-content"} -->
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->   
-{if $has_store} 
-<div class="category">
+ 
+<div class="category {if !$has_store}m_b0{/if}">
     <div class="ecjia-content">
+    	{if $cycleimage}
         <div class="category-cycleimage">
 			<div id="swiper-merchant-cycleimage" class="swiper-container">
 				<div class="swiper-wrapper">
@@ -27,7 +28,9 @@
 				{/if}
 			</div>
         </div>
+        {/if}
         
+        {if $has_store}
         <div class="category_list">
             <div class="ecjia-category-swiper">
 				<div id="category-swiper-web" class="swiper-container" data-url='{RC_Uri::url("merchant/store/category")}'>
@@ -46,8 +49,10 @@
     			<div class="swiper-button-next swiper-button-white"></div>
 			</div>
         </div>
+        {/if}
     </div>
     
+    {if $has_store}
     <div class="store_list">
         <div class="store_list_title">
             <img src="{$theme_url}images/default/store_list_line.png"/>
@@ -117,12 +122,11 @@
         {/if}
         {$store_list.page}
     </div>
+    {else}
+	<!-- #BeginLibraryItem "/library/no_content.lbi" --><!-- #EndLibraryItem -->
+	{/if}
 </div>
-{else}
-<div class="m_t80">
-<!-- #BeginLibraryItem "/library/no_content.lbi" --><!-- #EndLibraryItem -->
-</div>
-{/if}
+
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/choose_city.lbi" --><!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/nav.lbi" --><!-- #EndLibraryItem -->

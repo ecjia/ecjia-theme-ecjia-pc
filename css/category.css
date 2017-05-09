@@ -4,6 +4,10 @@
     background-color: #fff;
 }
 
+.category.m_b0 {
+	margin-bottom: 0;
+}
+
 .category .ecjia-content {
 	width: 100%;
 }
