@@ -230,6 +230,15 @@
 				$.cookie('close_choose_city', 1, {
 					expires: 7
 				});
+				
+				var location_id = $('.location-position').attr('data-id');
+				var location_name = $('.location-position').text();
+				$.cookie('location_id', location_id, {
+					expires: 7
+				});
+				$.cookie('location_name', location_name, {
+					expires: 7
+				});
 
 				location.reload();
 				$(document).scrollTop(0);

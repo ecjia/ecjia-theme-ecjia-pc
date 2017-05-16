@@ -2,6 +2,7 @@
 <!--  Name: 城市选择 -->
 <!--  Description: 这是城市选择模块 -->
 <!--  */ -->
+{nocache}
 <div class="choose-city-div">
 	<div class="city-content">
 		<div class="header">
@@ -18,7 +19,7 @@
 					{if $info.location_id}
 						<!-- {foreach from=$info.region_list item=val} -->
 						{if $info.location_id eq $val.id}
-							<li class="position-li {if $info.city_id eq $val.id}active{/if}" data-id="{$val.id}">{$val.name}</li>
+							<li class="position-li {if $info.city_id eq $val.id}active{/if} location-position" data-id="{$val.id}">{$val.name}</li>
 						{/if}
 						<!-- {/foreach} -->
 					{/if}
@@ -33,3 +34,4 @@
 	</div>
 </div>
 <div class="choose-city-overlay"></div>
+{/nocache}
