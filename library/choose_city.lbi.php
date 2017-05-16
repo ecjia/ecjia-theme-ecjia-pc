@@ -16,11 +16,11 @@
 			<div class="content-right">
 				<div class="position">
 					{if $info.location_id}
-					<!-- {foreach from=$info.region_list item=val} -->
-					{if $info.location_id eq $val.id}
-					<li class="position-li {if $info.city_id eq $val.id}active{/if}" data-id="{$val.id}">{$val.name}</li>
-					{/if}
-					<!-- {/foreach} -->
+						<!-- {foreach from=$info.region_list item=val} -->
+						{if $info.location_id eq $val.id}
+							<li class="position-li {if $info.city_id eq $val.id}active{/if}" data-id="{$val.id}">{$val.name}</li>
+						{/if}
+						<!-- {/foreach} -->
 					{/if}
 				</div>
 				<div class="position-list">

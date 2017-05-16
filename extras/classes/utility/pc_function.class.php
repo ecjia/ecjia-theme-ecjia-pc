@@ -78,6 +78,7 @@ class pc_function {
         }
         $shop_wechat_qrcode = ecjia::config('shop_wechat_qrcode');
         $shop_wechat_qrcode = !empty($shop_wechat_qrcode) ? RC_Upload::upload_url() . '/' . $shop_wechat_qrcode : '';
+        
         if (empty($_COOKIE['city_id'])) {
             $ipInfos = self::GetIpLookup();
             if (!isset($ipInfos['city']) || empty($ipInfos['city'])) {
