@@ -58,7 +58,7 @@ class pc_controller {
             ecjia_front::$controller->redirect(RC_Uri::home_url() . '/sites/m/');
         }
         
-        $cache_id = sprintf('%X', crc32($_SERVER['QUERY_STRING'] . '-' . $_COOKIE['city_id'] . '-' . $_COOKIE['city_name'] . '-' . $_COOKIE['location_id'] . '-' . $_COOKIE['location_name']));
+        $cache_id = sprintf('%X', crc32($_SERVER['QUERY_STRING'] . '-' . $_COOKIE['city_id'] . '-' . $_COOKIE['city_name']));
         
         if (!ecjia_front::$controller->is_cached('index.dwt', $cache_id)) {
             $general_info = pc_function::get_general_info();
