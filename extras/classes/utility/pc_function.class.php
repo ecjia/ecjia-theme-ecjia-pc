@@ -82,7 +82,7 @@ class pc_function {
         if (empty($_COOKIE['city_id'])) {
             $ipInfos = self::GetIpLookup();
             if (!isset($ipInfos['city']) || empty($ipInfos['city'])) {
-                $ipInfos['city'] = '上海';
+                $ipInfos['city'] = !empty($regions) ? $regions[0]['name'] : '上海';
             }
             $city_detail = RC_DB::table('region')->where('region_name', 'like', '%' . mysql_like_quote($ipInfos['city']) . '%')->where('region_type', 2)->first();
             setcookie("city_id", $city_detail['region_id'], RC_Time::gmtime() + 3600 * 24 * 7);

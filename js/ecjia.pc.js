@@ -215,7 +215,7 @@
 					hideDiv();
 					return false;
 				}
-				$(this).parents('.content-right').find('.position-li').removeClass('active');
+				$(this).parents('.content').find('.position-li').removeClass('active');
 				$(this).addClass('active');
 
 				var city_id = $(this).attr('data-id');
