@@ -79,7 +79,7 @@ class pc_function {
         $shop_wechat_qrcode = ecjia::config('shop_wechat_qrcode');
         $shop_wechat_qrcode = !empty($shop_wechat_qrcode) ? RC_Upload::upload_url() . '/' . $shop_wechat_qrcode : '';
         
-//         if (empty($_COOKIE['city_id'])) {
+        if (empty($_COOKIE['city_id'])) {
             $ipInfos = self::GetIpLookup();
             if (!isset($ipInfos['city']) || empty($ipInfos['city'])) {
                 $ipInfos['city'] = '上海';
@@ -90,13 +90,13 @@ class pc_function {
             $_COOKIE['city_id'] = $city_detail['region_id'];
             $_COOKIE['city_name'] = $city_detail['region_name'];
             
-            if (empty($_COOKIE['location_id'])) {
+//             if (empty($_COOKIE['location_id'])) {
             	setcookie("location_id", $city_detail['region_id'], RC_Time::gmtime() + 3600 * 24 * 7);
             	setcookie("location_address", $city_detail['region_name'], RC_Time::gmtime() + 3600 * 24 * 7);
             	$_COOKIE['location_id'] = $city_detail['region_id'];
             	$_COOKIE['location_address'] = $city_detail['region_name'];
-            }
-//         }
+//             }
+        } 
         
         $kf_qq = '';
         if (ecjia_config::has('qq')) {
