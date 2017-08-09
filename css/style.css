@@ -271,10 +271,10 @@ a:active,a:hover{text-decoration:none;color:#47aa4d}
 .ecjia-page-footer .outlink .blog-ico:hover{background:url(../images/blog_hover.png)}
 .ecjia-page-footer .outlink .wechat{background:url(../images/wechat.png)}
 .ecjia-page-footer .outlink-qrcode{position:relative;display:inline-block}
-.ecjia-page-footer .outlink-qrcode .wechar-code{position:absolute;width:130px;top:-197px;padding:10px 5px;background:#f8f8f8;z-index:99;border-radius:5px 5px 0 0;display:none}
-.ecjia-page-footer .outlink-qrcode .wechar-code img{width:130px;height:130px}
+.ecjia-page-footer .outlink-qrcode .wechat-code{position:absolute;width:130px;top:-197px;padding:10px 5px;background:#f8f8f8;z-index:99;border-radius:5px 5px 0 0;display:none}
+.ecjia-page-footer .outlink-qrcode .wechat-code img{width:130px;height:130px}
 .ecjia-page-footer .outlink .wechat:hover{background:url(../images/wechat_hover.png)}
-.ecjia-page-footer .outlink .outlink-qrcode:hover .wechar-code{display:block}
+.ecjia-page-footer .outlink .outlink-qrcode:hover .wechat-code{display:block}
 .ecjia-page-footer .footer-links p{text-align:center}
 .ecjia-page-footer .footer-links p a{margin-right:20px}
 
@@ -287,10 +287,10 @@ a:active,a:hover{text-decoration:none;color:#47aa4d}
 .page-footer .outlink .blog-ico:hover{background:url(../images/blog_hover.png)}
 .page-footer .outlink .wechat{background:url(../images/wechat.png)}
 .page-footer .outlink-qrcode{position:relative;display:inline-block}
-.page-footer .outlink-qrcode .wechar-code{position:absolute;width:130px;top:-197px;padding:10px 5px;background:#f8f8f8;z-index:99;border-radius:5px 5px 0 0;display:none}
-.page-footer .outlink-qrcode .wechar-code img{width:130px;height:130px}
+.page-footer .outlink-qrcode .wechat-code{position:absolute;width:130px;top:-197px;padding:10px 5px;background:#f8f8f8;z-index:99;border-radius:5px 5px 0 0;display:none}
+.page-footer .outlink-qrcode .wechat-code img{width:130px;height:130px}
 .page-footer .outlink .wechat:hover{background:url(../images/wechat_hover.png)}
-.page-footer .outlink .outlink-qrcode:hover .wechar-code{display:block}
+.page-footer .outlink .outlink-qrcode:hover .wechat-code{display:block}
 .page-footer .footer-links p{text-align:center}
 .page-footer .footer-links p a{margin-right:20px}
 
