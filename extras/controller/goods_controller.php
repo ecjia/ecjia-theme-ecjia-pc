@@ -97,7 +97,10 @@ class goods_controller {
 	                $goods_options['sort'] = array($sort_by => $sort_order);
 	                ecjia_front::$controller->assign('sort_by', $sort_by);
 	                ecjia_front::$controller->assign('sort_order', $sort_order);
+	            } else {
+	            	$goods_options['sort'] = array('g.sort_order' => 'asc');
 	            }
+
 	            if ($type == 'hot') {
 	                $goods_options['intro'] = 'hot';
 	            }
