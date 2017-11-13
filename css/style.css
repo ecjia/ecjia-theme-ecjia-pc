@@ -9,7 +9,7 @@ a:active,a:hover{text-decoration:none;color:#47aa4d}
 .ecjia-header .ecjia-content{overflow:visible;height:80px}
 .ecjia-content .search{height:120px;position:relative}
 .search input{margin-top:25px;width:220px;height:25px;border-radius:4px 0 0 4px}
-.search button{background:#47aa4d;border:none;width:35px;height:35px;font-size:20px;font-weight:700;color:#fff;margin-top:15px;border-radius:0 4px 4px 0;margin-left:-4px}
+.search button{background:#47aa4d;border:none;width:35px;height:35px;font-size:20px;font-weight:700;color:#fff;margin-top:14px;border-radius:0 4px 4px 0;margin-left:-4px}
 .search i{display:inline-block;width:20px;height:20px;background-image:url(../images/icon_search_white.png);background-repeat:no-repeat;background-size:20px 20px}
 .ecjia-content .search .shelper{position:absolute;z-index:2;width:232px;height:auto;border:1px solid #ccc;top:61px;background:#fff;box-shadow:1px 2px 1px rgba(0,0,0,.2);border-top:none;border-radius:0 0 4px 4px;display:none}
 .ecjia-content .search .shelper .search-item{float:left;width:110px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
