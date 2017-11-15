@@ -62,10 +62,10 @@ class merchant_function {
         if (empty($shop_info)) {
         	return array();
         }
-        $db_region          = RC_Model::model('shipping/region_model');
         $info               = RC_DB::table('store_franchisee')->where('store_id', $store_id)->select('province', 'city', 'address')->first();
-        $province_name      = $db_region->where(array('region_id' => $info['province']))->get_field('region_name');
-        $city_name          = $db_region->where(array('region_id' => $info['city']))->get_field('region_name');
+        $province_name      = RC_DB::table('regions')->where('region_id', $info['province'])->pluck('region_name');
+        $city_name          = RC_DB::table('regions')->where('region_id', $info['city'])->pluck('region_name');
+
         $shop_address		= $province_name.' '.$city_name.' '.$info['address'];
         $outward_info = RC_DB::table('merchants_config')->where('store_id', $store_id)->where(function ($query) {
             	$query->where('code', 'shop_trade_time')

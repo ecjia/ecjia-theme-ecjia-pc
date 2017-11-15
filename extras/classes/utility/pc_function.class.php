@@ -64,7 +64,7 @@ class pc_function {
         $regions = array();
         if (ecjia_config::has('mobile_recommend_city')) {
             $mobile_recommend_city = explode(',', ecjia::config('mobile_recommend_city'));
-            $region_data = RC_DB::table('region')->whereIn('region_id', $mobile_recommend_city)->get();
+            $region_data = RC_DB::table('regions')->whereIn('region_id', $mobile_recommend_city)->get();
             if (!empty($region_data)) {
                 foreach ($region_data as $val) {
                     $regions[] = array('id' => $val['region_id'], 'name' => $val['region_name']);
@@ -86,7 +86,7 @@ class pc_function {
             if (!isset($ipInfos['city']) || empty($ipInfos['city'])) {
                 $ipInfos['city'] = !empty($regions) ? $regions[0]['name'] : '上海';
             }
-            $city_detail = RC_DB::table('region')->where('region_name', 'like', '%' . mysql_like_quote($ipInfos['city']) . '%')->where('region_type', 2)->first();
+            $city_detail = RC_DB::table('regions')->where('region_name', 'like', '%' . mysql_like_quote($ipInfos['city']) . '%')->where('region_type', 2)->first();
             setcookie("city_id", $city_detail['region_id'], RC_Time::gmtime() + 3600 * 24 * 7);
             setcookie("city_name", $city_detail['region_name'], RC_Time::gmtime() + 3600 * 24 * 7);
             $_COOKIE['city_id'] = $city_detail['region_id'];
