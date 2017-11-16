@@ -116,7 +116,7 @@ class pc_function {
         	'company_name' 			=> ecjia::config('company_name'), 
         	'powered' 				=> 'Powered&nbsp;by&nbsp;<a href="https:\\/\\/ecjia.com" target="_blank">ECJia</a>', 
         	'service_phone' 		=> ecjia::config('service_phone'), 
-        	'city_id' 				=> !empty($_COOKIE['city_id']) ? intval($_COOKIE['city_id']) : 0, 
+        	'city_id' 				=> !empty($_COOKIE['city_id']) ? trim($_COOKIE['city_id']) : '', 
         	'city_name' 			=> !empty($_COOKIE['city_name']) ? trim($_COOKIE['city_name']) : '',
         	'http_host'				=> isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '',
         	'kf_qq'					=> $kf_qq,
