@@ -301,7 +301,18 @@ class pc_function {
     	$where .= " AND (is_on_sale='" . 1 . "')";
     	$where .= " AND (is_alone_sale='" . 1 . "')";
 //     	$where .= " AND (g.is_hot='" . 1 . "')";
-    	$where .= " AND (s.city = '".$_COOKIE['city_id']."')";
+
+        $length = strlen($_COOKIE['city_id']);
+        if ($length == 4) {
+            $where .= " AND (s.province = '".$_COOKIE['city_id']."')";
+        } elseif ($length == 6) {
+            $where .= " AND (s.city = '".$_COOKIE['city_id']."')";
+        } elseif ($length == 8) {
+            $where .= " AND (s.district = '".$_COOKIE['city_id']."')";
+        } elseif ($length == 11) {
+            $where .= " AND (s.street = '".$_COOKIE['city_id']."')";
+        }
+
     	$where .= " AND (s.shop_close = '". 0 ."')";
     	$where .= " AND (g.is_delete = '". 0 ."')";
     	$where .= " AND (g.review_status > '". 2 ."')";
@@ -313,13 +324,41 @@ class pc_function {
     		->where(RC_DB::raw('s.status'), 1);
     	/* 记录总数 */
     	$count['goods_count'] = $db_goods->whereRaw('is_delete = ' . $is_delete . '' . $where)->count('goods_id');
-		$count['store_count'] = RC_DB::table('store_franchisee')
-			->where('city', $_COOKIE['city_id'])
-			->where('shop_close', 0)
-			->where('merchants_name', 'like', '%' . mysql_like_quote($filter['keywords']) . '%')
-			->count();
-    	
+
+        $db_store_franchisee = RC_DB::table('store_franchisee')->where('shop_close', 0)
+            ->where('merchants_name', 'like', '%' . mysql_like_quote($filter['keywords']) . '%');
+
+        if ($length == 4) {
+            $db_store_franchisee->where('province', $_COOKIE['city_id']);
+        } elseif ($length == 6) {
+            $db_store_franchisee->where('city', $_COOKIE['city_id']);
+        } elseif ($length == 8) {
+            $db_store_franchisee->where('district', $_COOKIE['city_id']);
+        } elseif ($length == 11) {
+            $db_store_franchisee->where('street', $_COOKIE['city_id']);
+        }
+		$count['store_count'] = $db_store_franchisee->count();
     	return $count;
+    }
+    
+    public function has_store() {
+    	$db_store_franchisee = RC_DB::table('store_franchisee');
+    	$store = array();
+    	if (!empty($_COOKIE['city_id'])) {
+    		$length = strlen($_COOKIE['city_id']);
+    		if ($length == 4) {
+    			$db_store_franchisee->where('province', $_COOKIE['city_id']);
+    		} elseif ($length == 6) {
+    			$db_store_franchisee->where('city', $_COOKIE['city_id']);
+    		} elseif ($length == 8) {
+    			$db_store_franchisee->where('district', $_COOKIE['city_id']);
+    		} elseif ($length == 11) {
+    			$db_store_franchisee->where('street', $_COOKIE['city_id']);
+    		}
+    	}
+    	$store = $db_store_franchisee->where('shop_close', 0)->where('status', 1)->get();
+    	$has_store = !empty($store) ? true : false;
+    	return $has_store;
     }
 }
 //end

@@ -51,14 +51,24 @@ class merchant_function {
      */
     public static function get_merchant_info($store_id) {
         //店铺基本信息
-        $shop_info = RC_DB::table('store_franchisee as sf')
+        $db_store_franchisee = RC_DB::table('store_franchisee as sf')
         	->leftJoin('merchants_config as mc', RC_DB::raw('sf.store_id'), '=', RC_DB::raw('mc.store_id'))
         	->where(RC_DB::raw('mc.code'), 'shop_notice')
         	->where(RC_DB::raw('sf.store_id'), $store_id)
         	->where(RC_DB::raw('sf.status'), 1)
-        	->selectRaw('sf.manage_mode, sf.address, sf.merchants_name, sf.store_id, sf.shop_close, mc.value, sf.province, sf.city, sf.shop_keyword')
-        	->where(RC_DB::raw('sf.city'), $_COOKIE['city_id'])
-        	->first();
+        	->selectRaw('sf.manage_mode, sf.address, sf.merchants_name, sf.store_id, sf.shop_close, mc.value, sf.province, sf.city, sf.shop_keyword');
+        
+        $length = strlen($_COOKIE['city_id']);
+        if ($length == 4) {
+        	$db_store_franchisee->where(RC_DB::raw('sf.province'), $_COOKIE['city_id']);
+        } elseif ($length == 6) {
+        	$db_store_franchisee->where(RC_DB::raw('sf.city'), $_COOKIE['city_id']);
+        } elseif ($length == 8) {
+        	$db_store_franchisee->where(RC_DB::raw('sf.district'), $_COOKIE['city_id']);
+        } elseif ($length == 11) {
+        	$db_store_franchisee->where(RC_DB::raw('sf.street'), $_COOKIE['city_id']);
+        }
+        $shop_info = $db_store_franchisee->first();
         if (empty($shop_info)) {
         	return array();
         }

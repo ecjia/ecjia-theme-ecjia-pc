@@ -9,7 +9,7 @@ defined('IN_ECJIA') or header("HTTP/1.0 404 Not Found");exit('404 Not Found');
 <div class="choose-city-div">
 	<div class="city-content">
 		<div class="header">
-			<div class="title">请选择您所在的城市</div>
+			<div class="title">请选择您所在的位置</div>
 			<span class="close_div">X</span>
 		</div>
 		<div class="content">
@@ -26,7 +26,7 @@ defined('IN_ECJIA') or header("HTTP/1.0 404 Not Found");exit('404 Not Found');
 				</div>
 			</div>
 			<div class="content-bottom">
-				<div class="title">热门城市</div>
+				<div class="title">经营区域</div>
 				<div class="position-list">
 					<!-- {foreach from=$info.region_list item=val} -->
 					<li class="position-li {if $info.city_id eq $val.id}active{/if}" data-id="{$val.id}">{$val.name}</li>
