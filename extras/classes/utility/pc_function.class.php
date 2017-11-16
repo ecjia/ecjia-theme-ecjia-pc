@@ -86,7 +86,7 @@ class pc_function {
             if (!isset($ipInfos['city']) || empty($ipInfos['city'])) {
                 $ipInfos['city'] = !empty($regions) ? $regions[0]['name'] : '上海';
             }
-            $city_detail = RC_DB::table('regions')->where('region_name', 'like', '%' . mysql_like_quote($ipInfos['city']) . '%')->where('region_type', 2)->first();
+            $city_detail = RC_DB::table('regions')->where('region_name', 'like', '%' . mysql_like_quote($ipInfos['city']) . '%')->where('region_type', 3)->first();
             setcookie("city_id", $city_detail['region_id'], RC_Time::gmtime() + 3600 * 24 * 7);
             setcookie("city_name", $city_detail['region_name'], RC_Time::gmtime() + 3600 * 24 * 7);
             $_COOKIE['city_id'] = $city_detail['region_id'];
