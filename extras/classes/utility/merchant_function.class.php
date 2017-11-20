@@ -49,7 +49,7 @@ class merchant_function {
     /*
      * 店铺信息
      */
-    public static function get_merchant_info($store_id) {
+    public static function get_merchant_info($store_id = 0) {
         //店铺基本信息
         $db_store_franchisee = RC_DB::table('store_franchisee as sf')
         	->leftJoin('merchants_config as mc', RC_DB::raw('sf.store_id'), '=', RC_DB::raw('mc.store_id'))
