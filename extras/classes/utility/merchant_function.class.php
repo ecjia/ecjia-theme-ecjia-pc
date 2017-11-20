@@ -73,8 +73,8 @@ class merchant_function {
         	return array();
         }
         $info               = RC_DB::table('store_franchisee')->where('store_id', $store_id)->select('province', 'city', 'address')->first();
-        $province_name      = RC_DB::table('regions')->where('region_id', $info['province'])->pluck('region_name');
-        $city_name          = RC_DB::table('regions')->where('region_id', $info['city'])->pluck('region_name');
+        $province_name      = ecjia_region::getRegionName($info['province']);
+        $city_name          = ecjia_region::getRegionName($info['city']);
 
         $shop_address		= $province_name.' '.$city_name.' '.$info['address'];
         $outward_info = RC_DB::table('merchants_config')->where('store_id', $store_id)->where(function ($query) {
