@@ -81,16 +81,14 @@ class pc_function {
         $shop_wechat_qrcode = ecjia::config('shop_wechat_qrcode');
         $shop_wechat_qrcode = !empty($shop_wechat_qrcode) ? RC_Upload::upload_url() . '/' . $shop_wechat_qrcode : '';
         
+        
         if (empty($_COOKIE['city_id'])) {
-            $ipInfos = self::GetIpLookup();
-            if (!isset($ipInfos['city']) || empty($ipInfos['city'])) {
-                $ipInfos['city'] = !empty($regions) ? $regions[0]['name'] : '上海';
-            }
+            $adcode = self::GetIpLookup();
+            $region_id = $adcode ? $adcode : (!empty($regions) ? $regions[0]['id'] : '');
             $city_detail = RC_DB::table('regions')
-                ->where('region_name', 'like', '%' . mysql_like_quote($ipInfos['city']) . '%')
-                ->where('region_type', 3)
+                ->where('region_id', $region_id)
                 ->first();
-                
+
             setcookie("city_id", $city_detail['region_id'], RC_Time::gmtime() + 3600 * 24 * 7);
             setcookie("city_name", $city_detail['region_name'], RC_Time::gmtime() + 3600 * 24 * 7);
             $_COOKIE['city_id'] = $city_detail['region_id'];
@@ -193,23 +191,18 @@ class pc_function {
         if (empty($ip)) {
             $ip = self::GetIp();
         }
-        $res = @file_get_contents('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip=' . $ip);
-        if (empty($res)) {
-            return false;
+        $key = ecjia::config('map_qq_key');
+        $ip = '61.135.17.68';
+        $res = @file_get_contents('https://apis.map.qq.com/ws/location/v1/ip?ip='.$ip.'&key='.$key);
+        
+        $json = json_decode($res, true);
+        if ($json['status'] != 0) {
+        	return false;
         }
-        $jsonMatches = array();
-        preg_match('#\\{.+?\\}#', $res, $jsonMatches);
-        if (!isset($jsonMatches[0])) {
-            return false;
-        }
-        $json = json_decode($jsonMatches[0], true);
-        if (isset($json['ret']) && $json['ret'] == 1) {
-            $json['ip'] = $ip;
-            unset($json['ret']);
-        } else {
-            return false;
-        }
-        return $json;
+        $shop_country = !empty(ecjia::config('shop_country')) ? ecjia::config('shop_country') : 'CN';
+        $adcode = $shop_country.$json['result']['ad_info']['adcode'];
+
+        return $adcode;
     }
     
     public static function get_cat_info($cat_id, $select_id) {
