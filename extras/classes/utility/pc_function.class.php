@@ -192,7 +192,6 @@ class pc_function {
             $ip = self::GetIp();
         }
         $key = ecjia::config('map_qq_key');
-        $ip = '61.135.17.68';
         $res = @file_get_contents('https://apis.map.qq.com/ws/location/v1/ip?ip='.$ip.'&key='.$key);
         
         $json = json_decode($res, true);
