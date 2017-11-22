@@ -16,12 +16,10 @@ defined('IN_ECJIA') or header("HTTP/1.0 404 Not Found");exit('404 Not Found');
 			<div class="content-position">
 				<div class="guess-position">猜你在</div>
 				<div class="position">
-					{if $info.location_id}
-						<!-- {foreach from=$info.region_list item=val} -->
-						{if $info.location_id eq $val.id}
-							<li class="position-li {if $info.city_id eq $val.id}active{/if} location-position" data-id="{$val.id}">{$val.name}</li>
-						{/if}
-						<!-- {/foreach} -->
+					{if $info.location_address}
+						<li class="position-li active" data-id="{$info.location_id}">{$info.location_address}</i>
+					{else}
+					<li class="position-li-none">猜不出来，请在下方区域中选择一个位置</li>
 					{/if}
 				</div>
 			</div>

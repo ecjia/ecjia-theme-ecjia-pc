@@ -81,10 +81,9 @@ class pc_function {
         $shop_wechat_qrcode = ecjia::config('shop_wechat_qrcode');
         $shop_wechat_qrcode = !empty($shop_wechat_qrcode) ? RC_Upload::upload_url() . '/' . $shop_wechat_qrcode : '';
         
-        
         if (empty($_COOKIE['city_id'])) {
             $adcode = self::GetIpLookup();
-            $region_id = $adcode ? $adcode : (!empty($regions) ? $regions[0]['id'] : '');
+            $region_id = $adcode ? $adcode : '';
             $city_detail = RC_DB::table('regions')
                 ->where('region_id', $region_id)
                 ->first();
