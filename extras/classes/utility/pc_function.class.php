@@ -336,7 +336,7 @@ class pc_function {
     	return $count;
     }
     
-    public function has_store() {
+    public static function has_store() {
     	$db_store_franchisee = RC_DB::table('store_franchisee');
     	$store = array();
     	if (!empty($_COOKIE['city_id'])) {
