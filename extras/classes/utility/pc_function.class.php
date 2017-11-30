@@ -197,7 +197,8 @@ class pc_function {
         if ($json['status'] != 0) {
         	return false;
         }
-        $shop_country = !empty(ecjia::config('shop_country')) ? ecjia::config('shop_country') : 'CN';
+        $shop_country = ecjia::config('shop_country');
+        $shop_country = !empty($shop_country) ? $shop_country : 'CN';
         $adcode = $shop_country.$json['result']['ad_info']['adcode'];
 
         return $adcode;
