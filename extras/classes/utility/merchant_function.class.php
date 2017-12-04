@@ -72,11 +72,13 @@ class merchant_function {
         if (empty($shop_info)) {
         	return array();
         }
-        $info               = RC_DB::table('store_franchisee')->where('store_id', $store_id)->select('province', 'city', 'address')->first();
+        $info               = RC_DB::table('store_franchisee')->where('store_id', $store_id)->select('province', 'city', 'district', 'street', 'address')->first();
         $province_name      = ecjia_region::getRegionName($info['province']);
         $city_name          = ecjia_region::getRegionName($info['city']);
-
-        $shop_address		= $province_name.' '.$city_name.' '.$info['address'];
+        $district_name      = ecjia_region::getRegionName($info['district']);
+        $street_name        = ecjia_region::getRegionName($info['street']);
+        
+        $shop_address		= $province_name.$city_name.$district_name.$street_name.' '.$info['address'];
         $outward_info = RC_DB::table('merchants_config')->where('store_id', $store_id)->where(function ($query) {
             	$query->where('code', 'shop_trade_time')
             		->orwhere('code', 'shop_kf_mobile')
