@@ -261,7 +261,7 @@ a:active,a:hover{text-decoration:none;color:#47aa4d}
 .ecjia-page-footer .friend-link .friend-link-content li:nth-child(9n+1){margin:0}
 .ecjia-page-footer .friend-link .friend-link-content li{float:left;overflow:hidden;width:118px;height:60px;text-align:center;background:#fff;margin-left:10px;line-height:55px;cursor:pointer;margin-bottom:20px;border:1px solid #eee;border-radius:4px}
 .ecjia-page-footer .friend-link .link-content a{color:#08c}
-.ecjia-page-footer .friend-link .link-content a span {line-height: 20px;text-overflow: ellipsis;width: 120px;overflow: hidden;-webkit-line-clamp: 3;-webkit-box-orient: vertical;display: -webkit-inline-box;vertical-align: middle;text-align: left;}
+.ecjia-page-footer .friend-link .link-content a span {line-height: 20px;text-overflow: ellipsis;width: 120px;overflow: hidden;-webkit-line-clamp: 3;-webkit-box-orient: vertical;display: -webkit-inline-box;vertical-align: middle;}
 
 .ecjia-page-footer .helper .mod{float:left;margin-right:-1px;width:25%}
 .ecjia-page-footer .helper .mod .mod-wrap{padding:0 15px;overflow:hidden}
