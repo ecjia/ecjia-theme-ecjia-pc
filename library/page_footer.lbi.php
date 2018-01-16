@@ -68,7 +68,7 @@ defined('IN_ECJIA') or exit('No permission resources.');
 				<!-- {if $info.link_list.has_logo} -->
 				<ul class="link-content">
 				<!-- {foreach from=$info.link_list.has_logo item=val} -->
-				<li><a href="{$val.link_url}" target="__blank"><img src="{$val.link_logo}" width="100" height="auto"></a></li>
+				<li><a href="{$val.link_url}" target="__blank"><img src="{$val.link_logo}" width="110" height="auto"></a></li>
 				<!-- {/foreach} -->
 				</ul>
 				<!-- {/if} -->
