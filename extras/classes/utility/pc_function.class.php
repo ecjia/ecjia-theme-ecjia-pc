@@ -105,7 +105,13 @@ class pc_function {
         	$kf_qq = $kf_qq[0];
         }
         
-        list($has_logo_arr, $no_logo_arr) = RC_Api::api('friendlink', 'friendlink_list');
+        //获取友情链接数据
+        $result = RC_Api::api('friendlink', 'friendlink_list', ['type' => 'all']);
+        if (! is_ecjia_error($result)) {
+            list($has_logo_arr, $no_logo_arr) = $result;
+        } else {
+            list($has_logo_arr, $no_logo_arr) = [];
+        }
         
         $data = array(
         	'shop_logo' 		=> $shop_logo_url, 
