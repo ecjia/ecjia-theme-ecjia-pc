@@ -337,6 +337,27 @@
 				location.reload();
 				$(document).scrollTop(0);
             });
+
+        	//点击索引查询城市
+            $('.letter a').off('click').on('click', function () {
+                var s = $(this).html();
+                var top = $(this).attr('data-top');
+                if (top == 'top') {
+                    $('.city-container').stop(true, false).animate({
+                        scrollTop: 0
+                    }, 500);
+                } else {
+                    if ($('#' + s + '1').offset() == undefined) {
+                        return false;
+                    }
+                    var top = $('#' + s + '1').offset().top;
+                    $('.city-container').stop(true, false).animate({
+                        scrollTop: top
+                    }, 500);
+                    $("#showLetter span").html(s);
+                    $("#showLetter").show().delay(1000).hide(0);
+                }
+            });
 		},
 
 		toggle_cat: function() {
