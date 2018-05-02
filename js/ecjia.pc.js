@@ -347,10 +347,16 @@
                         scrollTop: 0
                     }, 500);
                 } else {
-                    if ($('#' + s + '1').offset() == undefined) {
-                        return false;
-                    }
-                    var top = $('#' + s + '1').offset().top;
+                	var height = $('#' + s + '1').attr('data-height');
+                	if (height == undefined) {
+	                    if ($('#' + s + '1').position() == undefined) {
+	                        return false;
+	                    }
+	                    var top = $('#' + s + '1').position().top;
+	                    $('#' + s + '1').attr('data-height', top);
+                	} else {
+                		top = height;
+                	}
                     $('.city-container').stop(true, false).animate({
                         scrollTop: top
                     }, 500);
