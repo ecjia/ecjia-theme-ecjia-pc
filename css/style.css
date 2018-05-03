@@ -3647,7 +3647,7 @@ a:active,a:hover {
 .ecjia-select-city .city-container {
 	width: 100%;
 	overflow: auto;
-	max-height: 370px;
+	height: 370px;
 }
 
 .ecjia-select-city .letter {

@@ -92,7 +92,7 @@
 				var d_h = $(window).height();
 				var d_w = $(window).width();
 				var m_l = (d_w - 650) / 2;
-				var m_t = (d_h - 550) / 2;
+				var m_t = (d_h - $('.choose-city-div').height()) / 2;
 				$(".choose-city-div").css({
 					"left": m_l + "px",
 					"top": m_t + "px"
@@ -100,9 +100,7 @@
 			});
 
 			// 效果
-			$(".suspension").find(".j-icon").mouseover(
-
-			function() {
+			$(".suspension").find(".j-icon").mouseover(function() {
 				$('.suspension-box-item').children('div').hide();
 				$(this).parent('.suspension-box-item').children('div').show();
 			});
@@ -275,11 +273,6 @@
                 $('.ecjia-history-city').html(html);
             }
 
-            var height = $('.city-content').height();
-            var letter_height = $('.letter').height();
-            var top = (height - letter_height) / 5;
-            $('.letter').css('top', top);
-
             $('.select-city-li').off('click').on('click', function () {
                 var $this = $(this);
                 var id = $this.attr('data-id');
@@ -347,16 +340,10 @@
                         scrollTop: 0
                     }, 500);
                 } else {
-                	var height = $('#' + s + '1').attr('data-height');
-                	if (height == undefined) {
-	                    if ($('#' + s + '1').position() == undefined) {
-	                        return false;
-	                    }
-	                    var top = $('#' + s + '1').position().top;
-	                    $('#' + s + '1').attr('data-height', top);
-                	} else {
-                		top = height;
-                	}
+                    if ($('#' + s + '1').position() == undefined) {
+                        return false;
+                    }
+                    var top = $('#' + s + '1').position().top + $('.city-container').scrollTop();
                     $('.city-container').stop(true, false).animate({
                         scrollTop: top
                     }, 500);
@@ -563,16 +550,22 @@
 	};
 
 	function showDiv() {
-		$(".choose-city-div").show();
-		$(".choose-city-overlay").show();
 		var d_h = $(window).height();
 		var d_w = $(window).width();
+
 		var m_l = (d_w - 650) / 2;
-		var m_t = (d_h - 550) / 2;
+		var m_t = (d_h - $('.choose-city-div').height()) / 2;
 		$(".choose-city-div").css({
 			"left": m_l + "px",
 			"top": m_t + "px"
 		});
+   		$(".choose-city-div").show();
+		$(".choose-city-overlay").show();
+
+		var container_height = $('.city-container').height();
+        var letter_height = $('.letter').height();
+        var top = (container_height - letter_height) / 2;
+        $('.letter').css('top', top);
 	}
 
 	function hideDiv() {

@@ -34,7 +34,7 @@ defined('IN_ECJIA') or header("HTTP/1.0 404 Not Found");exit('404 Not Found');
 				<div class="letter">
 					<ul>
 						{if $info.location_address}
-						<li><a href="javascript:;" data-top="top" data-height="">定位</a></li>
+						<li><a href="javascript:;" data-top="top">定位</a></li>
 						{/if}
 						<!--{foreach from=$info.region_list key=key item=val}-->
 						<li><a href="javascript:;">{$key}</a></li>
