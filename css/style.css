@@ -1756,7 +1756,7 @@ a:active,a:hover {
 	width: 650px;
 	min-height: 350px;
 	max-height: 600px;
-	overflow: hidden;
+	overflow: hidden
 }
 
 .choose-city-overlay {
@@ -1777,7 +1777,7 @@ a:active,a:hover {
 
 .choose-city-div .header {
 	border-bottom: 1px solid #eee;
-	padding: 10px 20px;
+	padding: 10px 20px
 }
 
 .choose-city-div .close_div {
@@ -1790,7 +1790,7 @@ a:active,a:hover {
 
 .choose-city-div .guess-position {
 	padding: 10px 0;
-	color: #838383;
+	color: #838383
 }
 
 .choose-city-div .content-bottom .position-li,.choose-city-div .content-position .position .position-li {
@@ -1799,13 +1799,13 @@ a:active,a:hover {
 	margin: 0 10px 10px 0;
 	padding: 5px 15px;
 	cursor: pointer;
-	padding-left: 0;
+	padding-left: 0
 }
 
 .choose-city-div .position .position-li-none {
 	display: inline-block;
 	float: left;
-	margin: 0 10px 10px 0;
+	margin: 0 10px 10px 0
 }
 
 .choose-city-div .content-bottom .position-li.active {
@@ -1817,7 +1817,7 @@ a:active,a:hover {
 
 .choose-city-div .content-position {
 	overflow: hidden;
-	padding: 0 20px;
+	padding: 0 20px
 }
 
 .choose-city-div .content-position .position {
@@ -3618,23 +3618,22 @@ a:active,a:hover {
 	margin-top: 80px
 }
 
-/*选择城市*/
 .ecjia-select-city {
-	position: relative;
+	position: relative
 }
 
 .ecjia-select-city .showLetter {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 35%;
-    left: 50%;
-    border-radius: 8px;
-    text-align: center;
-    display: none;
-    background-color: #444444;
-    opacity: 0.8;
-    color: #fff;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	top: 35%;
+	left: 50%;
+	border-radius: 8px;
+	text-align: center;
+	display: none;
+	background-color: #444;
+	opacity: .8;
+	color: #fff
 }
 
 .ecjia-select-city .showLetter span {
@@ -3647,7 +3646,7 @@ a:active,a:hover {
 .ecjia-select-city .city-container {
 	width: 100%;
 	overflow: auto;
-	height: 370px;
+	height: 370px
 }
 
 .ecjia-select-city .letter {
@@ -3674,12 +3673,12 @@ a:active,a:hover {
 
 .ecjia-select-city .city-list .city-letter {
 	font-size: 15px;
-    display: inline-block;
-    padding: 5px 0;
-    width: 100%;
-    color: #838383;
-    background-color: #f7f7f7;
-    padding-left: 20px;
+	display: inline-block;
+	padding: 5px 0;
+	width: 100%;
+	color: #838383;
+	background-color: #f7f7f7;
+	padding-left: 20px
 }
 
 .ecjia-select-city .city-list p {
@@ -3689,7 +3688,7 @@ a:active,a:hover {
 	border-bottom: 1px solid #e8ecf1;
 	cursor: pointer;
 	color: #232323;
-	padding-left: 20px;
+	padding-left: 20px
 }
 
 .location-city {
@@ -3707,31 +3706,31 @@ a:active,a:hover {
 .location-city-container {
 	padding-left: 4%;
 	padding-bottom: 1em;
-	font-weight: bold;
+	font-weight: 700
 }
 
 .position .icon-position {
-    width: 20px;
-    height: 20px;
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-image: url(../images/icon/icon_position.png);
-    display: block;
-    float: left;
-    background-position: 0 0;
-    margin-right: 10px;
+	width: 20px;
+	height: 20px;
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-image: url(../images/icon/icon_position.png);
+	display: block;
+	float: left;
+	background-position: 0 0;
+	margin-right: 10px
 }
 
 .history-city-title {
 	font-size: 14px;
 	line-height: 40px;
 	margin: 0 15px;
-	position: relative;
+	position: relative
 }
 
 .ecjia-history-city {
 	overflow: hidden;
-	background-color: #f7f7f7;
+	background-color: #f7f7f7
 }
 
 .ecjia-history-city ul li {
@@ -3740,9 +3739,9 @@ a:active,a:hover {
 	background-color: #fff;
 	padding: 10px 30px;
 	border-radius: 4px;
-	cursor: pointer;
+	cursor: pointer
 }
 
 .ecjia-history-city ul li:first-child {
-	margin-left: 15px;
+	margin-left: 15px
 }
