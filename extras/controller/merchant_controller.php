@@ -87,7 +87,7 @@ class merchant_controller {
 				
 				$category 	= !empty($_GET['cat_id']) 	? intval($_GET['cat_id']) 	: 0;
 				$page	  	= !empty($_GET['page'])		? intval($_GET['page']) 	: 1;
-				$order_by 	= array('g.sort_order' => 'asc', 'goods_id' => 'desc');
+				$order_by 	= array('g.store_sort_order' => 'asc', 'goods_id' => 'desc');
 				
 				$select_id = !empty($_GET['select_id']) ? intval($_GET['select_id']) : 0;
 				if (!empty($select_id)) {
