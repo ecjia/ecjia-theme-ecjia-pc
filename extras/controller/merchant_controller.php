@@ -465,7 +465,7 @@ class merchant_controller {
             		foreach ($config as $keys => $vals) {
             			if ($vals['code'] == 'shop_notice') {
             				if (!empty($vals['value'])) {
-            					$store_list[$key]['shop_notice'] = $vals['value'];
+            					$store_list[$key]['shop_notice'] = (mb_strlen($vals['value']) > 19) ? mb_substr($vals['value'], 0, 19).'...' : $vals['value'];
             				}
             			}
             			if ($vals['code'] == 'shop_trade_time') {
