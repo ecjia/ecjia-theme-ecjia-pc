@@ -2131,8 +2131,7 @@ a:active, a:hover {
 }
 .goods_info .green {
     background-color: #47aa4d;
-    color: #FFF!important;
-    border: 0!important
+    color: #FFF;
 }
 .goods_info .goods_current_screen {
     line-height: 50px;
@@ -2275,18 +2274,17 @@ a:active, a:hover {
     margin-right: 1em
 }
 .goods_info .goods_info_panel .goods_attribute ul {
-    height: 2em;
-    max-width: 49em;
-    margin-bottom: .8em
+    max-width: 440px;
+    margin-bottom: .8em;
+    margin-left: 60px;
 }
 .goods_info .goods_info_panel .goods_attribute li {
-    cursor: pointer;
-    float: left;
+	cursor: pointer;
     border: 1px solid #eaeaea;
     border-radius: 50px;
     padding: .3em;
-    display: block;
-    margin: 0 0 0 5px;
+    display: inline-block;
+    margin: 0 0 5px 5px;
     font-size: 14px;
     text-align: center;
     width: 4em;
@@ -2296,7 +2294,7 @@ a:active, a:hover {
     color: #333;
     text-overflow: ellipsis;
     overflow: hidden;
-    white-space: nowrap
+    white-space: nowrap;
 }
 .panel_sao {
     position: absolute;
