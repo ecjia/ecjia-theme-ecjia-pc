@@ -2131,7 +2131,7 @@ a:active, a:hover {
 }
 .goods_info .green {
     background-color: #47aa4d;
-    color: #FFF;
+    color: #FFF!important;
 }
 .goods_info .goods_current_screen {
     line-height: 50px;
@@ -2287,7 +2287,7 @@ a:active, a:hover {
     margin: 0 0 5px 5px;
     font-size: 14px;
     text-align: center;
-    width: 4em;
+	width: 5em;
     margin-right: 1em;
     height: 1em;
     line-height: 1em;
