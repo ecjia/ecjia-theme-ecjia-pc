@@ -281,7 +281,7 @@ class goods_controller
                 ecjia_front::$controller->assign('goods_info', $goods_info);
                 ecjia_front::$controller->assign('pc_keywords', $goods_info['keywords']);
                 ecjia_front::$controller->assign('pc_description', $goods_info['goods_brief']);
-                ecjia_front::$controller->assign_title('商品详情');
+                ecjia_front::$controller->assign_title($goods_info['goods_name']);
             }
         }
         ecjia_front::$controller->display('goods_show.dwt', $cache_id);
