@@ -339,7 +339,7 @@ class merchant_controller
             ecjia_front::$controller->assign('pc_keywords', $shop_info['shop_keyword']);
             ecjia_front::$controller->assign('pc_description', $shop_info['shop_description']);
 
-            $map_qq_url = 'https://map.qq.com/api/js?v=2.exp&key='.ecjia::config('map_qq_key');
+            $map_qq_url = ecjia_location_mapjs();
             ecjia_front::$controller->assign('map_qq_url', $map_qq_url);
         }
         ecjia_front::$controller->display('merchant_detail.dwt', $cache_id);
