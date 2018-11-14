@@ -134,7 +134,8 @@ class pc_function
         if (isset($_COOKIE['close_choose_city'])) {
             $data['close_choose_city'] = 1;
         }
-        return $data;
+
+        return RC_Hook::apply_filters('ecjia_general_info_filter', $data);
     }
 
     public static function get_child_tree($cat_id)
