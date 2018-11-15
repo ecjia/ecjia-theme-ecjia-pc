@@ -2016,9 +2016,13 @@ a:active, a:hover {
     min-width: 1200px;
     text-align: center;
     line-height: 0;
+}
+
+.category-cycleimage.category-cycleimage-default {
     background: url(../images/category/category_list.png) 0 0 no-repeat;
     background-size: 100% 420px
 }
+
 .category-cycleimage .swiper-container {
     margin: 0 auto;
     position: relative;
