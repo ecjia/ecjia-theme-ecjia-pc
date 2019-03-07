@@ -98,7 +98,7 @@
 					     <span>{$val.shop_trade_time}</span>
     				</div>
     				{/if}
-                    {if $val.value}
+                    {if $val.shop_notice}
         				<div class="advertisement">
         				    <img src="{$theme_url}images/bugle_50.png"/>
         					<div class="goods-price">{$val.shop_notice}</div>

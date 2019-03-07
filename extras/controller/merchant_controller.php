@@ -387,7 +387,7 @@ class merchant_controller
             $cat_info = RC_DB::table('store_category')->where('cat_id', $cat_id)->first();
             if (!empty($cat_info)) {
                 ecjia_front::$controller->assign('pc_keywords', $cat_info['keywords']);
-                ecjia_front::$controller->assign('pc_description', $shop_info['cat_desc']);
+                ecjia_front::$controller->assign('pc_description', $cat_info['cat_desc']);
             }
         }
         ecjia_front::$controller->display('category_list.dwt', $cache_id);
@@ -430,7 +430,7 @@ class merchant_controller
         $db_store_franchisee->leftJoin('store_category as sc', RC_DB::raw('sf.cat_id'), '=', RC_DB::raw('sc.cat_id'));
 
         if (!empty($keywords)) {
-            $where .= "merchants_name LIKE '%" . mysql_like_quote($keywords) . "%'";
+            $where = "merchants_name LIKE '%" . mysql_like_quote($keywords) . "%'";
             $db_store_franchisee->whereRaw($where);
         }
 
