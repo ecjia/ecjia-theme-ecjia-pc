@@ -269,11 +269,11 @@ class merchant_controller
                             $row['avatar_img'] = RC_Upload::upload_url($row['avatar_img']);
                         }
                         if ($row['comment_rank'] > 3) {
-                            $row['level'] = '好评';
+                            $row['level'] = __('好评', 'ecjia-pc');
                         } elseif ($row['comment_rank'] > 1 && $row['comment_rank'] < 4) {
-                            $row['level'] = '中评';
+                            $row['level'] = __('中评', 'ecjia-pc');
                         } elseif ($row['comment_rank'] == 1) {
-                            $row['level'] = '差评';
+                            $row['level'] = __('差评', 'ecjia-pc');
                         }
                         $list[] = $row;
                     }
@@ -382,7 +382,7 @@ class merchant_controller
             ecjia_front::$controller->assign('cycleimage', $data);
             $count = count($data);
             ecjia_front::$controller->assign('count', $count);
-            ecjia_front::$controller->assign_title('商家列表');
+            ecjia_front::$controller->assign_title(__('商家列表', 'ecjia-pc'));
 
             $cat_info = RC_DB::table('store_category')->where('cat_id', $cat_id)->first();
             if (!empty($cat_info)) {
