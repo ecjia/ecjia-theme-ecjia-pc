@@ -100,7 +100,7 @@ defined('IN_ECJIA') or exit('No permission resources.');
 		<span class="outlink-qrcode">
             <div class="wechat-code">
 				<img src="{$info.shop_wechat_qrcode}">
-				<span>{t domain="ecjia-pc"}打开微信扫一扫关注<{/t}/span>
+				<span>{t domain="ecjia-pc"}打开微信扫一扫关注{/t}</span>
 			</div>
 			<a class="wechat" href="javascript:void(0)"></a>
 		</span>
