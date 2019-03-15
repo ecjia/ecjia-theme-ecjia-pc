@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ECJia到家PC模板 1.24.0\n"
 "Report-Msgid-Bugs-To: https://www.ecjia.com/support/theme/ecjia-pc\n"
-"POT-Creation-Date: 2019-03-13 09:48:24+00:00\n"
+"POT-Creation-Date: 2019-03-15 01:49:15+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -404,7 +404,7 @@ msgid "合作伙伴"
 msgstr ""
 
 #: content/themes/ecjia-pc/library/page_footer.lbi.php:103
-msgid "打开微信扫一扫关注<"
+msgid "打开微信扫一扫关注"
 msgstr ""
 
 #: content/themes/ecjia-pc/library/page_footer.lbi.php:116
