@@ -205,6 +205,13 @@ class goods_controller
                     }
                 }
 
+                $par = array(
+                    'goods_id' => $goods_id,
+                );
+                /*商品信息*/
+                $goods_info_api = ecjia_api_manager::make()->api(ecjia_api_const::GOODS_DETAIL)->data($par)->run();
+                $goods_info['properties_new'] = $goods_info_api['properties'];
+
                 $num = 1;
                 if (!empty($properties['pro'])) {
                     foreach ($properties['pro'] as $key => $val) {
