@@ -253,7 +253,7 @@ class goods_controller
                 $disk              = RC_Filesystem::disk();
                 $default_image     = RC_Theme::get_template_directory_uri() . '/images/mobile_app_icon.png';
                 $goods_logo        = !empty($goods_info['goods_thumb']) && $disk->exists(RC_Upload::upload_path($goods_info['goods_thumb'])) ? RC_Upload::upload_path($goods_info['goods_thumb']) : $default_image;
-                $goods_info['url'] = with(new Ecjia\App\Mobile\Qrcode\GenerateGoods($goods_id, $goods_logo))->getQrcodeUrl();
+//                $goods_info['url'] = with(new Ecjia\App\Mobile\Qrcode\GenerateGoods($goods_id, $goods_logo))->getQrcodeUrl();
 
                 $shop_info                 = merchant_function::get_merchant_info($store_id);
                 $goods_info['goods_thumb'] = !empty($goods_info['goods_thumb']) ? RC_Upload::upload_url($goods_info['goods_thumb']) : '';
