@@ -138,7 +138,7 @@ class pc_controller
             ecjia_front::$controller->assign('pc_keywords', ecjia::config('shop_keywords'));
             ecjia_front::$controller->assign('pc_description', ecjia::config('shop_desc'));
         }
-        ecjia_front::$controller->display('index.dwt', $cache_id);
+        return ecjia_front::$controller->display('index.dwt', $cache_id);
     }
 
     public static function search()
