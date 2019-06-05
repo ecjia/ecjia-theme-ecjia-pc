@@ -58,7 +58,7 @@ class pc_controller
     {
         //判断是否手机访问，如果手机访问，自动跳到H5页面
         if (RC_Agent::isPhone()) {
-            ecjia_front::$controller->redirect(RC_Uri::home_url() . '/sites/m/');
+            return ecjia_front::$controller->redirect(RC_Uri::home_url() . '/sites/m/');
         }
 
         $general_info = pc_function::get_general_info();
