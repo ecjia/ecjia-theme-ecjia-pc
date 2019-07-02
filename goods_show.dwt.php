@@ -22,12 +22,12 @@
                 <div class="goods_attribute">
                     <p class="goods_price">
                         <span>{t domain="ecjia-pc"}价格{/t}</span>
-                        {if $goods_info.promote_price && $goods_info.promote_price != 0}
+                        {if $goods_info.product_specification.0.formatted_product_shop_price && $goods_info.product_specification.0.formatted_product_shop_price == 0}
                         <span class="fl_price">{$goods_info.product_specification.0.formatted_product_shop_price}</span>
                         <span class="original_price">{t domain="ecjia-pc"}原价：{/t}{$goods_info.product_specification.0.formatted_product_market_price}</span>
                         <input name="goods_promote_price" type="hidden" value={$goods_info.promote_price} />
                         {else}
-                        <span class="fl_price">￥{$goods_info.f_price}</span>
+                        <span class="fl_price">{$goods_info.f_price}</span>
                         <span class="original_price">{t domain="ecjia-pc"}原价：{/t}{$goods_info.market_price}</span>
                         <input name="goods_promote_price" type="hidden" value={$goods_info.shop_price} />
                         {/if}

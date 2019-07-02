@@ -230,7 +230,7 @@ class goods_controller
                     }
                 }
 
-                $goods_info['f_price'] = $f_price;
+                $goods_info['f_price'] = ecjia_price_format($f_price);
                 $store_id              = $goods_info['store_id'];
 
                 $favourable_result = RC_Api::api('favourable', 'store_favourable_list', array('store_id' => $store_id));
