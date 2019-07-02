@@ -301,6 +301,7 @@ class goods_controller
                 ecjia_front::$controller->assign_title($goods_info['goods_name']);
             }
         }
+
         return ecjia_front::$controller->display('goods_show.dwt', $cache_id);
     }
 

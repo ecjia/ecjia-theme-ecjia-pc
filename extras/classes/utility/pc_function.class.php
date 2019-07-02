@@ -403,6 +403,24 @@ class pc_function
         return $goods_list;
     }
 
+    public static function findDefaultProductGoodsAttrId($specification = null, $good_id)
+    {
+        if (is_null($specification)) {
+            $goods_specification = self::getServerCartData($good_id);
+            $specification = $goods_specification['specification'];
+        }
+
+        $product_goods_attr_label = collect($specification)
+            ->pluck('value')
+            ->map(function($item) {
+                return $item[0];
+            })
+            ->pluck('id')
+            ->implode(',');
+
+        return $product_goods_attr_label;
+    }
+
     /**
      * 通过规格参数查找货品规格
      * @param $spec
